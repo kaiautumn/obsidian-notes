@@ -1,0 +1,10 @@
+{
+  "trashOption": "system",
+  "showLineNumber": false,
+  "livePreview": true,
+  "attachmentFolderPath": "./附件",
+  "promptDelete": true,
+  "readableLineLength": false,
+  "foldHeading": true,
+  "vimMode": false
+}

@@ -1,0 +1,328 @@
+一、类型大小
+		sizeof int 4    short2    long 4    long long 8
+	       		   bool 1 		char 1
+			   float 4    double 8    long double16
+	字符数据类型以整形数据在内存中存储。
+	系统会在字符串末尾加一个"\0";
+
+二、比较
+	不可以9<x<10;要x>9&&x<10
+	
+三、 运算
+	0 运算优先级 ！>算术>关系>&&  ||>赋值
+	1求余运算：整数才可求余，余数的符号与左边数的符号相同。
+			  3%2=1 -3%2=-1 3%-2=1 -3%-2=-1 8%4=0
+	2运算符结合方向是从左到右；而赋值，单目运算符，条件运算符这三种从右到左。
+	3 x.y.z=1,2,3
+		x+=y+=z   y=y+z=5;x=x+y=x+5=6;
+	4单目运算符：+ - ++ -- ! & sizeof ~ *(解引用)
+		增减运算符：a=5;b=++a;c=a++;
+						b=6;c=6;a=7;
+	5条件运算符，即三元运算符，是 ？：  
+				条件运算符的优先等级高于赋值运算。
+	6 c=4 ,(c=1)&&(c=3)&&(c=5)结果是1，且c=5;
+	      i=0;j=++i;k=i++;  j=1,k=1;i=2;
+	7 条件运算符  表达式1，表达式2   
+				 整个逗号表达式的值是表达式2的值。
+	8 逗号表达式 所有的运算符中优先级最低。
+	
+四、循环
+	1 for适合已知循环次数 while适合不知的循环次数 
+	
+	2 goto简化程序
+
+五、指针
+	1、指针变量没有赋上全值之前，不要用*改变取值，
+	     *其实在改变另一个实体数据类型的值
+	2、int *p=new int;
+	     安全赋值方法
+	3、指针只能加减和关系运算，若p指向数组变量，	      p=&a[5],q=p+3表示q指向a[8]
+
+六、数组
+	1、不能对数组的大小做动态定义，即数组的大小必须是常量。
+	2、数组名就是数组的首地址，也可以称为一个指针。
+	  int a[10],int *pa=a;cout<<*pa，输出的就是a[0];
+	  a[i],p[i],*(a+i),*(p+i)等价
+	3、二维数组
+		3.1初始化可{{}{}}，{,,,,} a[][3]={{}{}}
+		     第一维的长度可以省略，第二维不行。
+	 	3.2a表示二维数组的首地址，a[0]表示第0行首地址，&a[0][0]是第一个元素首地址。
+		     &a[i][j]=&a[i]+j*sizeof(a[0][0]);
+	4、字符串数组
+		char str[5]={'x','j','t','u'} 或 char stu[]="xjtu";
+		字符串尾部有一个'\0'，表示字符串结束。
+
+七、函数（指针版）
+	int(*p)(int,int)  ,  p的类型是int(*)(int,int);
+	1、例子
+		int max(int,int)//声明，定义不写了；
+		main(){
+			int(*p)(int,int); int a,b,c;
+			p=max;//必须先指向，不能写p=max(a,b)
+			cin>>a>>b;
+			c=(*p)(a,b);
+			cout<<c;
+		}
+	2、指向函数的指针，用于把函数的地址作为参数传到其他函数
+	     即，能在一个函数中用到另外的函数，而引用的函数可以有不同的选择时，用指针代替。
+	     例:void fun(int (*x1)(int),int(*x2)(int,int)) 
+
+八、结构体（指针版）+   共用体
+	1、struct person *man； 结构体指针是结构体在内存中的首地址，指向指针的时候指向第一个；
+	2、struct person{int x;};
+	      main(){ person a;    person *pa=&a;  cout<<pa->x;}
+	3、共用体 union 共用体名
+					{成员表列 int i;char x;float z;}变量表列；
+				       或union data a,b,c;
+			a.i   b.x
+	4、共用体类型可以出现在结构体类型定义中，也可以定义共用体数组反之，结构体也可以出现在共用体类型定义中，数组也可以作为共用体的成员
+
+九、枚举
+	1、enum Weekday{sun,mon,tue,wen,thu,fri,sat};
+	      声明了一个枚举类型，可以定义枚举变量enum Weekday workday,weekend;
+
+十、类和对象
+			空对象占用字节为1，为了区分空对象占内存的位置，每个空对象都有一个独一无二的内存地址
+			当不空了的时候（有了非静态成员变量或函数），内存为变量的内存之和。
+
+	1、构造函数：在创建对象时为对象的成员属性赋值
+		类名(){},构造函数可以有参数，就是重载。然后在定义类的对象的时候根据是否传参走不同的构造函数
+		创建对象的时候，构造函数会自动调用，且只调用一次，
+			******构造函数提供了一种初始化对象的简单方法*******
+	2、析构函数：销毁对象(不只)；
+		~类名（）{}，不可以有参数，不会重载
+		对象在销毁前会自动调用析构函数，且只调用一次
+
+	3、构造函数的分类和调用
+		3.1无参构造（默认构造）、有参构造
+		3.2按类型：普通构造、拷贝构造person(const person &p)
+	  调用：1、括号法
+				person p( )   person p3(p1)  //调用默认构造函数时不要加（小括号）
+		     2、显示法
+				person p2=person(10);       //person(10)是匿名对象
+									     //b不要利用拷贝构造函数初始化匿名对象
+		     3、隐式转换法；
+				person p4=10  <==>  person p4=person(10)
+		3.3拷贝函数调用时机
+			3.3.1使用一个已经创建完毕的对象初始化一个新对象 
+				值传递的方式给函数参数传值
+				以值方式返回局部对象
+			3.3.2 class person
+				{ person (const person &p1) {age=p1.age; }	   }
+				当然，系统会默认定义一个拷贝构造函数
+		3.4构造函数调用规则：
+				构造类后，会给每个类添加至少3个函数
+				定义了有参构造函数，则系统不会定义默认构造函数，提供拷贝构造
+				定义了拷贝函数，则不会再构造其他函数
+
+				即，不定义拷贝函数，系统会默认person p2（p1）,将p1所有都给p2;
+
+	4 深拷贝和浅拷贝
+	   浅拷贝就是简单的复制拷贝操作，深拷贝就是在堆区重新申请空间进行拷贝工作
+	4.1浅拷贝导致堆区的内存重复释放——利用深拷贝来解决
+			
+			person(const person&p){
+					
+			}
+
+	5、初始化列表—另一种初始化的方式
+
+			class person{
+					public:
+						person(int a,int b,int c){ m_a=a ; m_b=b ; m_c=c;}     //传统
+						person(int a,int b,int c):m_a(a),m_b(b),m_c(c)  {  }     //初始化列表******************************************************
+					private:
+						int m_a,m_b,m_c;
+					};
+	6、类对象作为另一个类成员
+			class A
+			class B { A a }；
+
+	7、静态成员     stataic m_a;   static void func(){ cout<<"你是谁" }
+		————————————————————————————静态成员在全局区
+		7.1静态成员变量
+		  7.1.1注意:  所有对象共享同一份数据，同访问同修改
+			         在编译阶段分配内存（全局区）
+				 必须类内声明，类外初始化
+		  7.1.2访问：静态成员 变量不属于某个对象上，所有对象都共享同一份数据，所以静态变量2种访问方式
+				通过对象访问  person a;  cout<<a.m_a;
+				通过类名访问cout<<person::m_a;
+		  7.1.3静态成员变量也有访问权限——要访问public的，类外访问不到私有的静态成员变量
+		7.2静态成员函数
+		  7.2.1注意：所有对象共享一个函数
+				     静态成员函数只能访问静态成员变量 ———因为不知道访问具体哪个非静态对象
+		  7.2.2访问：通过对象；  person p1;  p1.func();
+				     通过类；person::func();
+		  7.2.3静态成员函数也有访问权限——要访问public的，类外访问不到私有的静态成员函数
+
+	8、对象模型
+		8.1成员变量和成员函数分开存储，虽然封装是一样。只有非静态的成员变量才属于类的对象上
+		     成员变量和成员和函数分开存储
+		8.2 this指针  ——this指针指向被调用的成员函数所属的对象
+				      ——不需定义，直接使用
+		      用途：1、形参和成员变量同名时，用this去区分		//解决名称冲突
+				 2、在类的非静态成员函数中返回对象本身，用return *this;
+		8.3空指针指向成员函数
+			void personage(){
+				if(this==NULL)
+					return ;
+				cout<<"age="<<age;
+			}
+			person*p=NULL;
+			p->personage();
+		8.4const修饰成员函数
+			常函数：成员函数加const后成为常函数，常函数内不可修改成员属性。
+					person{
+				        class  public:
+							void change() const {
+								m_a=100;		//报错
+								m_b=100；		//不报错
+							}
+							void func(){  }
+							int m_a;
+						        mutable int m_b;
+					}
+			        	person p1;
+					cout<<p1.m_a  
+					
+		             	      而成员属性声明时加关键字mutable后，在常函数中依然可以修改。
+			常对象：const person p;
+				      p.m_a=100//报错
+				      p.m_b=1000//不报错
+			常对象只能调用常函数。
+				      p.change();//报错
+				      p.func();//不报错
+	
+	9、友元   friend		让另外一些类访问私有属性
+					——客厅（public）卧室（private）
+					——全局函数做友元、类做友元、成员函数做友元
+		9.1全局函数做友元：全局函数void goodgay (){cout<<一个私有成员<<endl;}//会报错
+						需将 friend void goodgay();  加入到 class 中
+								class building { friend void goodgay()……  };
+								全局函数就可以访问class building的私有成员了
+		9.2类做友元：将friend class goodgay加入到class Building中
+		9.3成员函数做友元：将friend void goodgay::visit(); 放入class building中；
+
+	10、运算重载		内置的数据类型的表达式的运算符不可重载，如int + int
+		10.1加号 10.1.1类内中：person operator+(person &p){
+			或减号			person temp;
+							temp.m_a =this->m_a +p.m_a;
+							temp.m_b =this->m_b+p.m_b;
+							return temp;}					//写在类内
+				10.1.2全局函数person operator+(person &p1,person &p2){
+							person temp;
+							temp.m_a =p1.m_a +p2.m_a ;
+							temp.m_b =p1.m_b +p2.m_b ;
+							return temp;
+							}							//写在文件作用域
+		10.2左移运算符重载（左移运算符：<< ）一般不会利用成员函数重载左移运算符
+					ostream & operator<<(ostream &cout,person &p){
+					cout<<"m_a= "<<p.m_a<<"m_b= "<<p.m_b;
+					return cout;
+					}
+								//如此可无障碍地实现cout连续输出；
+								//若m_a , m_b是私有成员，则将此函数作为做友元函数放到class中就行
+		10.3递增运算符重载				写到类内
+										前置递增返回引用，后置递增返回值
+								//看代码
+		10.4赋值运算符重载		给一个类默认四种函数：构造析构拷贝  赋值运算符operator=，对属性进行拷贝
+								//看代码
+		10.5函数重载				//看代码
+					仿函数，没有固定写法；
+					类名（形参）；
+		10.6 匿名函数对象——执行完后立即被释放
+
+	11、继承		子类也成为派生类，父类也叫基类
+				calss 子类：继承方式  父类；
+			class base{  public:
+						void head(){}
+					 };
+			class Python : public base{
+					 };
+		11.1继承方式——公共继承、保护继承、私有继承
+				       父类中：public         protected   private    的成员到子类后是如下类型
+				公共继承：   public         protected   不可访问父类中的
+				保护继承：   protected   protected   不可访问父类中的
+				保护继承：   private        private        不可访问父类中的
+		11.2继承中的对象模型
+				父类中所有非静态成员都会继承，只是父类中私有成员访问不到，被隐藏了
+		11.3继承中的构造析构顺序
+				父类构造 子类构造 子类析构 父类析构
+ 		11.4继承同名成员处理方式
+				访问子类同名成员变量，直接访问即可；访问父类同名成员，需要加作用域
+					class Base{  int m_a;  };   class Son:public Base {int m_a;};
+					Base base;Son son;
+					cout<<"Base的同名成员"<<son.base::m_a<<endl;
+					******访问子类同名成员函数，直接访问即可；访问父类同名成员，需要加作用域
+					如果子类出现了和父类同名的成员函数，子类同名成员会隐藏父类所有同名函数，包括重载过的。如果想访问到父类被隐藏了的同名成员函数，需要加作用域。
+		11.5静态同名成员处理方式
+				通过对象访问   cout<<son.Base::m_a;
+				通过类名访问   cout<<son::m_a;
+							cout<<Son::Base::m_a;
+			静态成员函数处理方式
+				通过					son.func();
+									son.base::func();
+				通过类名访问			Son::func();
+									Son::Base::func();
+		11.6多继承语法	class 子类：继承方式 父类1，继承方式  父类2......
+		11.7菱形继承 		两个父类有相同的数据，需要在子类访问的时候加作用域以区分
+						虚继承解决两个相同的数据问题
+						virtual 
+						class Sheep:virrtual public Animal;	class Tuo:virtual public Animal
+	12、多态		静态多态：函数重载和运算符重载属于静态多态，复用函数名
+				动态多态：派生类和虚函数实现运行时多态；
+			区别:静态多态的函数地址早绑定--编译阶段确定地址
+				动态多态的函数地址晚绑定--运行阶段确定地址
+
+			1.动态多态要有继承关系
+			2.子类要重写父类虚函数
+			3.使用条件：父类指针或引用指向子类多态
+	13 模板
+		template<typename T>
+		T findmax(T arr[],int n){
+			T val;
+			for
+
+
+
+//函数加指针还是有点不太熟练
+//25不会
+
+//88页   90页
+
+
+
+函数（int *,int *）定义  （ int *, int *）  调用（ &a , &b）{ int temp=*a ;  *a = *b ; …}
+函数（int &x , int & y） 定义（int & x , int & y）  调用  ( x , y); { int temp =x ; x=y ;…} 
+
+
+对求输入了多少个字母                         '\0'空格  '\n'回车
+	1、有字数限制：cin.getline  +  for循环					cin.getline 还有一种用法，是cin.getline(a,101,'\n')
+					char a[100];							即读到回车就停止
+					int n=0;
+					cin.getline(a,101);
+					for(int i=0;i<100;i++){
+					if(a[i]!='\0')
+						n++;
+					else 
+						break;
+					}
+					cout<<n;
+		
+	2、没有字数限制：cin.get + while循环
+					cout<<"Please enter your sentence:";
+					char c;
+					cin.get(c);	
+					int cnt=1;
+					while(c!='\n'){
+					cnt++;
+					cin.get(c);
+					}
+					cout<<cnt;
+
+对判断输入的是不是Int类型
+		int a;    cin>>a;
+		if(cin.good())
+			cout<<a;
+		else
+			cout<<"error";
