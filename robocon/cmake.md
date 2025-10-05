@@ -1,3 +1,5 @@
+![[CMake_Practice.pdf]]
+
 # 基础
 每个cmake项目都有一个或多个CMakeLists.txt 文件，用于定义项目的构建规则、依赖关系、编译选项等。
 

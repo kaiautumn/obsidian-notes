@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ecd9ac3c475416f9",
+        "id": "0b086adad1da6a47",
         "type": "tabs",
         "children": [
           {
-            "id": "ee75d76c701be64d",
+            "id": "0916c2df626e7b80",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "git/git.md",
-                "mode": "source",
-                "source": false
+                "file": "robocon/附件/CMake_Practice.pdf"
               },
-              "icon": "lucide-file",
-              "title": "git"
+              "icon": "lucide-file-text",
+              "title": "CMake_Practice"
             }
           }
         ]
@@ -68,7 +66,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -172,38 +170,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ee75d76c701be64d",
+  "active": "0916c2df626e7b80",
   "lastOpenFiles": [
+    "robocon/cmake.md",
+    "robocon/附件/CMake_Practice.pdf",
+    "robocon/附件",
+    "linux学习.md",
+    "学习网站.md",
+    "latex.md",
+    "数模/axmath数学公式.md",
+    "睿抗/可视化编程启动.jpg",
+    "睿抗/睿抗.md",
+    "编程/Rstudio.md",
+    "编程",
+    "git/git.md",
+    "robocon/Bash.md",
+    "robocon/培训.md",
+    "学习网站",
+    "可以删/README.md",
     "git/git工作原理.png",
     "git/分支冲突.png",
-    "git/git.md",
-    "未命名.md",
-    "可以删/README.md",
-    "可以删/README.md",
-    "robocon/cmake.md",
-    "robocon/培训.md",
     "robocon",
-    "python/python.md",
-    "robocon/Bash.md",
+    "编程/python/python.md",
     "markdown语法.md",
     "git/desktop.ini",
     "git/屏幕截图 2025-08-11 151948.png",
     "git",
     "2025-08-09.md",
-    "Rstudio.md",
-    "latex.md",
-    "数模/axmath数学公式.md",
-    "睿抗/睿抗.md",
-    "睿抗/可视化编程启动.jpg",
     "数模/数模笔记.md",
     "2025-07-16.md",
     "未命名.canvas",
-    "c++/1c++基本语法.md",
-    "c++/2c++算法.md",
-    "python/python算法.md",
+    "编程/c++/1c++基本语法.md",
+    "编程/c++/2c++算法.md",
+    "编程/python/python算法.md",
     "c++/2未命名.md",
     "c++/数据结构与算法.md",
-    "c++/四区图.png",
+    "编程/c++/四区图.png",
     "数模",
     "附件/Pasted image 20250519232428.png",
     "未命名 1.md",
@@ -214,11 +216,7 @@
     "计程复习提纲.txt",
     "附件",
     "c++基本语法.md",
-    "英语ppt报告",
-    "新建文件夹",
-    "python",
     "c++/屏幕截图 2025-03-23 111222.png",
-    "屏幕截图 2025-03-23 111222.png",
-    "c++"
+    "屏幕截图 2025-03-23 111222.png"
   ]
 }
