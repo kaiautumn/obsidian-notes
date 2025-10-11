@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0b086adad1da6a47",
+        "id": "aac63f36345566d6",
         "type": "tabs",
         "children": [
           {
-            "id": "0916c2df626e7b80",
+            "id": "e7fb373cd1186fca",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "robocon/附件/CMake_Practice.pdf"
+                "file": "linux学习.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CMake_Practice"
+              "icon": "lucide-file",
+              "title": "linux学习"
             }
           }
         ]
@@ -77,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "753e93a91df2c70a",
@@ -170,14 +171,29 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0916c2df626e7b80",
+  "active": "15d3d314c74f39b4",
   "lastOpenFiles": [
+    "可以删/第四次作业/README.md",
+    "可以删/第四次作业/README.pdf",
+    "可以删/第三次作业说明 (10分).md",
+    "可以删/第四次作业/rqt_graph.png",
+    "可以删/第四次作业/control.png",
+    "可以删/第四次作业/gazebo.png",
+    "可以删/第四次作业",
+    "可以删/README.md",
+    "README.md",
+    "robocon/ROS2.md",
+    "学习网站.md",
+    "markdown语法.md",
+    "linux学习.md",
+    "latex.md",
+    "robocon/Linux常用命令.md",
     "robocon/cmake.md",
     "robocon/附件/CMake_Practice.pdf",
+    "2025-10-05.md",
+    "未命名.canvas",
+    "robocon/培训.md",
     "robocon/附件",
-    "linux学习.md",
-    "学习网站.md",
-    "latex.md",
     "数模/axmath数学公式.md",
     "睿抗/可视化编程启动.jpg",
     "睿抗/睿抗.md",
@@ -185,38 +201,23 @@
     "编程",
     "git/git.md",
     "robocon/Bash.md",
-    "robocon/培训.md",
     "学习网站",
-    "可以删/README.md",
     "git/git工作原理.png",
     "git/分支冲突.png",
     "robocon",
     "编程/python/python.md",
-    "markdown语法.md",
     "git/desktop.ini",
     "git/屏幕截图 2025-08-11 151948.png",
     "git",
     "2025-08-09.md",
     "数模/数模笔记.md",
     "2025-07-16.md",
-    "未命名.canvas",
     "编程/c++/1c++基本语法.md",
     "编程/c++/2c++算法.md",
     "编程/python/python算法.md",
-    "c++/2未命名.md",
-    "c++/数据结构与算法.md",
     "编程/c++/四区图.png",
     "数模",
     "附件/Pasted image 20250519232428.png",
-    "未命名 1.md",
-    "附件/Pasted image 20250519232720.png",
-    "附件/Pasted image 20250519232718.png",
-    "英语ppt报告/Literature Review.md",
-    "英语ppt报告/文献综述.md",
-    "计程复习提纲.txt",
-    "附件",
-    "c++基本语法.md",
-    "c++/屏幕截图 2025-03-23 111222.png",
-    "屏幕截图 2025-03-23 111222.png"
+    "附件/Pasted image 20250519232720.png"
   ]
 }
