@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程/编译过程.md",
+                "file": "编程/HTML.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "编译过程"
+              "title": "HTML"
             }
           }
         ]
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "753e93a91df2c70a",
@@ -173,14 +174,16 @@
   },
   "active": "f27bd1ee424830a7",
   "lastOpenFiles": [
+    "编程/c++/1c++基本语法.md",
+    "编程/c++/2c++算法.md",
+    "编程/HTML.md",
     "markdown语法.md",
+    "编程/编译过程.md",
     "linux学习.md",
     "latex.md",
     "学习网站.md",
     "git/分支冲突.png",
     "编程/Rstudio.md",
-    "编程/HTML.md",
-    "编程/编译过程.md",
     "robocon/Linux常用命令.md",
     "git/git.md",
     "数模/LSTM学习.md",
@@ -210,7 +213,6 @@
     "未命名.canvas",
     "robocon/附件",
     "睿抗/可视化编程启动.jpg",
-    "睿抗/睿抗.md",
     "编程",
     "学习网站",
     "git/git工作原理.png",
