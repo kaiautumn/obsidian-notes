@@ -6,6 +6,7 @@
       {
         "id": "aac63f36345566d6",
         "type": "tabs",
+        "dimension": 51.43603133159269,
         "children": [
           {
             "id": "f27bd1ee424830a7",
@@ -13,13 +14,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程/HTML.md",
+                "file": "编程/HTML/HTML.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "HTML"
-            }
+            },
+            "group": "93cbdfa9d4cef174"
+          }
+        ]
+      },
+      {
+        "id": "8ca042ace35157f1",
+        "type": "tabs",
+        "dimension": 48.56396866840731,
+        "children": [
+          {
+            "id": "9d8eb1f2e0885acd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "编程/HTML/HTML.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HTML"
+            },
+            "group": "93cbdfa9d4cef174"
           }
         ]
       }
@@ -174,14 +198,24 @@
   },
   "active": "f27bd1ee424830a7",
   "lastOpenFiles": [
-    "编程/c++/1c++基本语法.md",
-    "编程/c++/2c++算法.md",
-    "编程/HTML.md",
+    "可以删/第四次作业/README.pdf",
+    "可以删/第四次作业/README.md",
+    "可以删/第四次作业/rqt_graph.png",
+    "可以删/第三次作业说明 (10分).md",
+    "可以删/第四次作业/gazebo.png",
+    "可以删/第四次作业/control.png",
     "markdown语法.md",
-    "编程/编译过程.md",
     "linux学习.md",
     "latex.md",
     "学习网站.md",
+    "编程/HTML/HTML.md",
+    "编程/HTML/附件/Pasted image 20260221230520.png",
+    "编程/HTML/附件/列表表格表单.png",
+    "编程/HTML/附件",
+    "编程/HTML",
+    "编程/c++/1c++基本语法.md",
+    "编程/c++/2c++算法.md",
+    "编程/编译过程.md",
     "git/分支冲突.png",
     "编程/Rstudio.md",
     "robocon/Linux常用命令.md",
@@ -198,28 +232,17 @@
     "Psychopy.md",
     "robocon/Bash.md",
     "robocon/ROS2.md",
-    "可以删/第四次作业/README.md",
-    "可以删/第四次作业/README.pdf",
-    "可以删/第三次作业说明 (10分).md",
-    "可以删/第四次作业/rqt_graph.png",
-    "可以删/第四次作业/control.png",
-    "可以删/第四次作业/gazebo.png",
     "可以删/第四次作业",
     "可以删/README.md",
     "README.md",
     "robocon/cmake.md",
     "robocon/附件/CMake_Practice.pdf",
-    "2025-10-05.md",
     "未命名.canvas",
     "robocon/附件",
     "睿抗/可视化编程启动.jpg",
     "编程",
     "学习网站",
     "git/git工作原理.png",
-    "robocon",
-    "git/desktop.ini",
-    "git/屏幕截图 2025-08-11 151948.png",
-    "git",
-    "编程/c++/四区图.png"
+    "robocon"
   ]
 }
