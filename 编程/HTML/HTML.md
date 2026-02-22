@@ -120,3 +120,106 @@ h1一般一个网页只用一次，其他的没有限制
   <dd>列表详情</dd>
 </dl>
 ```
+#### 表格
+>table 表格，可加broder="1"添加1粗的边框
+>tr 行
+>th 表头单元格
+>td 内容单元格
+
+table嵌套tr，tr嵌套td/th
+```html
+<table>
+    <tr>
+        <th>nihao</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>nihao2</th>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+```
+>thead 表格头部内容
+>tbody 表格主体主要内容
+>tfoot 表格底部汇总信息
+>不过应该没什么效果
+
+- 合并单元格（竖着和横着）
+>1. 明确合并的目标
+>2. 跨行合并的话，保留最上单元格，对应的标签td里添加属性 rowspan=“”
+>3. 跨列合并的话，保留最左单元格，对应的标签td添加属性 colspan=“”
+>4. 删除其他单元格
+
+```html
+<table border="1">
+    <tr>
+        <th>nihao</th>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>nihao2</th>
+        <!-- <td>4</td> -->
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+```
+#### 表单
+作用：手机用户信息
+1. input标签 
+```html
+<input type="...">
+```
+
+- 占位文本：
+\<input type="..." placeholder="提示信息"\>
+- radio 单选框
+>name="xxx"xxx相同时为同一组里的单选功能
+>checked 默认选好这个单选
+
+- file 文件夹
+>multiple 实现上传多个文件的功能
+
+- checkbox
+>checked 默认勾选
+```html
+性别
+<input type="radio" name="gender" checked>男
+<input type="radio" name="gender">女
+<br>
+<input type="checkbox">
+<br>
+<input type="text">
+<br>
+<input type="password" placeholder="请输入密码">
+<br>
+<input type="submit">
+<br>
+<input type="reset">
+<br>
+<input type="button" value="点我">
+<br>
+<input type="color">
+<br>
+<input type="date">
+<br>
+<input type="datetime-local">
+<br>
+<input type="file">
+<input type="file" multiple>
+```
+2. 下拉菜单
+select嵌套option
+```html
+<select>
+    <option>北京</option>
+    <option>上海</option>
+    <option selected>深圳</option>
+</select>
+```
