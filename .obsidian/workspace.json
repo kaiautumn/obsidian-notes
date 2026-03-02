@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程/HTML/HTML.md",
+                "file": "编程/HTML/2CSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML"
+              "title": "2CSS"
+            }
+          },
+          {
+            "id": "facb4b252cf9e894",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.12.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -172,8 +185,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f27bd1ee424830a7",
+  "active": "facb4b252cf9e894",
   "lastOpenFiles": [
+    "编程/HTML/1HTML.md",
+    "编程/HTML/2CSS.md",
     "可以删/第四次作业/README.pdf",
     "可以删/第四次作业/README.md",
     "可以删/第四次作业/rqt_graph.png",
@@ -184,7 +199,6 @@
     "linux学习.md",
     "latex.md",
     "学习网站.md",
-    "编程/HTML/HTML.md",
     "编程/HTML/附件/Pasted image 20260221230520.png",
     "编程/HTML/附件/列表表格表单.png",
     "编程/HTML/附件",

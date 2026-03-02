@@ -223,3 +223,47 @@ select嵌套option
     <option selected>深圳</option>
 </select>
 ```
+3. textarea文本域
+多行输入文本，如输入评论、朋友圈
+```html
+<textarea>默认提示文字</textarea> 此时文本框右下角可以被拖拽，未来css会设置文本框尺寸
+```
+4. label标签
+网页中某个标签的说明文本，并且可以在增大表单控件的点击范围
+未来文本框、密码框、上传文件等都可以
+```html
+<label><input type="radio"> 女 </label>
+```
+5. button按钮
+```html
+<button type=""> 按钮 </button>
+```
+对应不同的type，按钮的功能也不一样
+>submit 提交按钮，点击后可以提交到后台（默认）
+>reset 重置按钮，点击后会将表单恢复至默认值
+>button 默认没有功能，配合javascript使用
+
+以上三个type是需要放在form里才能实现功能 
+```html
+<form>
+用户名：<input type="text">
+<br>
+密码：<input type="password">
+<button type="reset">重置</button>
+```
+6. div和span标签（无语义的布局标签）
+>div 独占一行（大盒子）
+>span 不换行（小盒子）
+```html
+<div>div标签</div>
+<span>span标签</span>
+```
+7. 字符实体
+即转义字符
+
+| 描述  | 实体      |
+| --- | ------- |
+| 空格  | \&nbsp; |
+| 小于号 | \&lt;   |
+| 大于号 | \&gt;   |
+[[2CSS]]
