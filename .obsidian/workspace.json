@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "2CSS"
             }
-          },
-          {
-            "id": "facb4b252cf9e894",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.12.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,8 +172,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "facb4b252cf9e894",
+  "active": "f27bd1ee424830a7",
   "lastOpenFiles": [
+    "VScode知识.md",
     "编程/HTML/1HTML.md",
     "编程/HTML/2CSS.md",
     "可以删/第四次作业/README.pdf",
@@ -225,7 +213,6 @@
     "可以删/第四次作业",
     "可以删/README.md",
     "README.md",
-    "robocon/cmake.md",
     "robocon/附件/CMake_Practice.pdf",
     "未命名.canvas",
     "robocon/附件",
